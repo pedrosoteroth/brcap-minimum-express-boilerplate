@@ -1,0 +1,35 @@
+{
+    "appenders": [{
+        "type": "clustered",
+        "appenders": [{
+                "type": "dateFile",
+                "filename": "./app/log/access.log",
+                "pattern": "-yyyy-MM-dd",
+                "category": "http"
+            },
+            {
+                "type": "file",
+                "filename": "./app/log/app.log",
+                "maxLogSize": 10485760,
+                "numBackups": 3
+            },
+            {
+                "type": "logLevelFilter",
+                "level": "trace",
+                "appender": {
+                    "type": "console",
+                    "layout": {
+                        "type": "json",
+                        "source": "development",
+                        "include": [
+                            "startTime",
+                            "categoryName",
+                            "data",
+                            "level"
+                        ]
+                    }
+                }
+            }
+        ]
+    }]
+}

@@ -1,0 +1,3 @@
+/node_modules/
+app/log/app.log
+npm-debug.log

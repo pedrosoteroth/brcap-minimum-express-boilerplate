@@ -1,0 +1,20 @@
+{
+  "name": "bcap-minimum-express-boilerplate",
+  "version": "1.0.0",
+  "description": "Minimal Express RESTful API boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pedro Sotero",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "consign": "^0.1.6",
+    "express": "^4.16.3",
+    "express-validator": "^5.2.0",
+    "log4js": "1.1.0",
+    "log4js-json": "0.2.0",
+    "log4js-json-layout": "^1.0.5"
+  }
+}
