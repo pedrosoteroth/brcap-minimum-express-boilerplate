@@ -1,7 +1,11 @@
-module.exports = (app) => {
-    const Joi = require('joi');
-    const validator = require('express-joi-validation')({});
+const Joi = require('joi');
+const validator = require('express-joi-validation')({});
+const {
+    getOrder,
+    postOrder
+} = require('../controller/orderController');
 
+module.exports = (app) => {
     const orders = ['food', 'drinks', 'entertainment'];
 
     const querySchema = Joi.object({
@@ -13,15 +17,7 @@ module.exports = (app) => {
         type: Joi.string().required().valid(orders)
     })
 
-    app.get('/orders', validator.query(querySchema), (req, res) => {
-        res.status(200);
-        res.send('HELLO GET');
-        return;
-    });
+    app.get('/orders', validator.query(querySchema), getOrder);
 
-    app.post('/orders', validator.body(bodySchema), (req, res) => {
-        res.status(200);
-        res.send('HELLO POST');
-        return;
-    });
+    app.post('/orders', validator.body(bodySchema), postOrder);
 };
