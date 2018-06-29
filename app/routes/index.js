@@ -1,13 +1,13 @@
 module.exports = (app) => {
     app.get('/', (req, res) => {
         res.status(200);
-        res.send('Hello minimal express boilerplate');
+        res.send('HELLO GET');
         return;
     });
 
-    app.post('/post', (req, res) => {
+    app.post('/', (req, res) => {
         res.status(200);
-        res.send('Hello post');
+        res.send('HELLO POST');
         return;
     });
 };
