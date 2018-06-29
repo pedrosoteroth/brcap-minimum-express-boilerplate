@@ -2,7 +2,6 @@ const express = require('express');
 const cors = require('cors');
 const consign = require('consign');
 const bodyParser = require('body-parser');
-const expressValidator = require('express-validator');
 const log4js = require('log4js');
 
 const port = process.env.PORT || 3000;
@@ -26,9 +25,6 @@ app.use(bodyParser.urlencoded({
 
 /** parse application json for @module app*/
 app.use(bodyParser.json())
-
-/** use expressValidator on @module app */
-app.use(expressValidator());
 
 /** use consign for autoload scripts into @module app*/
 consign({
