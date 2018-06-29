@@ -1,6 +1,6 @@
 module.exports = (app) => {
     /** Health check route */
-    app.get('/health', function (req, res) {
+    app.get('/health', (req, res) => {
         const pwd = process.env.PWD;
         const array = pwd.split('/');
         const projectName = array[array.length - 1];
