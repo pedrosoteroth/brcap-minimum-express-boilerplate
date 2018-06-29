@@ -1,24 +1,22 @@
-const app = require('express')();
+const express = require('express');
+const cors = require('cors');
 const consign = require('consign');
 const bodyParser = require('body-parser');
 const expressValidator = require('express-validator');
+const log4js = require('log4js');
+
 const port = process.env.PORT || 3000;
 
-var log4js = require('log4js');
-var logger = log4js.getLogger();
+const app = express();
+let logger = log4js.getLogger();
 
 /** configure lo4js using JSON type file*/
 log4js.configure(
     './config/log4js.json'
 )
 
-/** set options for app */
-app.options("/*", (req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
-    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
-    res.send(204);
-});
+/** enable cors */
+app.use(cors());
 
 /** parse application/x-www-form-urlencoded */
 app.use(bodyParser.urlencoded({
