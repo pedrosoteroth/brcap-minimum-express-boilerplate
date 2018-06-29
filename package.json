@@ -4,7 +4,7 @@
   "description": "Minimal Express RESTful API boilerplate",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test/**/* || true"
   },
   "author": "Pedro Sotero",
   "license": "ISC",
@@ -17,5 +17,11 @@
     "log4js": "1.1.0",
     "log4js-json": "0.2.0",
     "log4js-json-layout": "^1.0.5"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "sinon": "^6.0.1",
+    "supertest": "^3.1.0"
   }
 }
