@@ -21,6 +21,7 @@ app/
   |-db.js
 |-models/
 |-routes/
+|-utils/
 |-services/
 |-validations/ 
 ```
@@ -36,6 +37,6 @@ app/
 * **app/models/**: Modules/files abstraction of our database schema.
 * **app/routes/**: Modules/files that know which controllers should handle the incoming requests.
 * **app/services/**: Modules/files that handle business related rules.
-* **app/util/**: Help us with mixins methods.
+* **app/utils/**: Help us with mixins methods.
 * **app/validations/**: Knows how the incoming request should behave.
 
