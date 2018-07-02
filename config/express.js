@@ -10,36 +10,34 @@ const app = express();
 
 const logger = log4js.getLogger();
 
-/** configure lo4js using JSON type file*/
-log4js.configure(
-    './config/log4js.json'
-);
+/** configure lo4js using JSON type file */
+log4js.configure('./config/log4js.json');
 
 /** enable cors */
 app.use(cors());
 
-/** parse application/x-www-form-urlencoded body for @module app*/
+/** parse application/x-www-form-urlencoded body for @module app */
 app.use(bodyParser.urlencoded({
-    extended: false
-}))
+  extended: false,
+}));
 
-/** parse application json for @module app*/
-app.use(bodyParser.json())
+/** parse application json for @module app */
+app.use(bodyParser.json());
 
-/** use consign for autoload scripts into @module app*/
+/** use consign for autoload scripts into @module app */
 consign({
-        cwd: 'app'
-    })
-    .include('routes')
-    .into(app);
+  cwd: 'app',
+})
+  .include('routes')
+  .into(app);
 
-/** server listening message at @module app*/
+/** server listening message at @module app */
 app.listen(port, (err) => {
-    if (err) {
-        logger.error(`Failed to listen on port ${port}.`);
-        return process.exit(1);
-    }
-    logger.info(`Listening on port ${port}.`);
+  if (err) {
+    logger.error(`Failed to listen on port ${port}.`);
+    return process.exit(1);
+  }
+  return logger.info(`Listening on port ${port}.`);
 });
 
 /** * Express App. * @module app */
