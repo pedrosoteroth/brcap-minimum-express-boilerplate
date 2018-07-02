@@ -17,8 +17,6 @@ app/
 |-controllers/
 |-log/
 |-middlewares/
-  |-basic-auth.js
-  |-db.js
 |-models/
 |-routes/
 |-utils/
