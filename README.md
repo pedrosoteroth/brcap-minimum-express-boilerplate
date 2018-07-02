@@ -1,5 +1,7 @@
 # Minimum Express Boilerplate for Brasilcap
 
+Boilerplate suggested to work in Brasilcap with RESTful APIs
+
 ##Folder and file structure
 
 To begin with, the important parts of the structure for now are:
