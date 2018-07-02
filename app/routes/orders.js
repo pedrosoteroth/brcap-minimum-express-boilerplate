@@ -7,7 +7,7 @@ const {
 const {
   querySchema,
   bodySchema,
-} = require('../models/order');
+} = require('../validations/order');
 
 module.exports = (app) => {
   /**

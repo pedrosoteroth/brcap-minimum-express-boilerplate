@@ -10,7 +10,7 @@ const querySchema = Joi.object({
 });
 
 /**
- *  JOI Scheme for body request.
+ *  JOI Scheme for nody request.
  */
 const bodySchema = Joi.object({
     name: Joi.string().required(),
