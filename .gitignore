@@ -1,3 +1,4 @@
 /node_modules/
-app/log/app.log
+app/log/*
+!app/log/access.log
 npm-debug.log
