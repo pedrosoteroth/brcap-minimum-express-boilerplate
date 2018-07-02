@@ -8,5 +8,8 @@
     "parserOptions": {
         "ecmaVersion": 2016,
         "sourceType": "module"
+    },
+    "rules": {
+        "eol-last": 0
     }
 }
