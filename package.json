@@ -4,7 +4,7 @@
   "description": "Minimal Express RESTful API boilerplate",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/**/* || true"
+    "test": "mocha test/**/*.js || true"
   },
   "author": "Pedro Sotero",
   "license": "ISC",
