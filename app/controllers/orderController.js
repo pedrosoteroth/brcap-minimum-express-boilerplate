@@ -8,7 +8,7 @@
 /** GET order. */
 const getOrder = (req, res) => {
   res.status(200);
-  return res.send(`Hello yout current order type is ${req.query.type}`);
+  return res.send(`Hello your current order type is ${req.query.type}`);
 };
 
 /** POST order */
