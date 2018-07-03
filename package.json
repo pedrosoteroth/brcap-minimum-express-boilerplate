@@ -4,6 +4,7 @@
   "description": "Minimal Express RESTful API boilerplate",
   "main": "index.js",
   "scripts": {
+    "start": "babel-node app.js",
     "test": "nyc mocha test/**/*.spec.js --verbose || true"
   },
   "author": "Pedro Sotero",
@@ -22,9 +23,12 @@
     "joi": "^13.4.0",
     "log4js": "1.1.0",
     "log4js-json": "0.2.0",
-    "log4js-json-layout": "^1.0.5"
+    "log4js-json-layout": "^1.0.5",
+    "tiny-json-http": "^7.0.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "chai": "^4.1.2",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^13.0.0",
