@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "babel-node src",
-    "test": "nyc mocha test/**/*.spec.js --verbose --compilers js:babel-register || true",
+    "test": "nyc mocha test/**/*.spec.js -t 10000 --verbose --compilers js:babel-register || true",
     "build": "babel src -d dist",
     "server": "SET NODE_ENV=production && node dist"
   },
