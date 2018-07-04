@@ -6,7 +6,8 @@
   "scripts": {
     "start": "babel-node src",
     "test": "nyc mocha test/**/*.spec.js --verbose --compilers js:babel-register || true",
-    "build": "babel src -d dist"
+    "build": "babel src -d dist",
+    "server": "SET NODE_ENV=production && node dist"
   },
   "author": "Pedro Sotero",
   "license": "ISC",
