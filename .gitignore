@@ -1,5 +1,6 @@
 /node_modules/
-app/log/*
-!app/log/access.log
+src/log/*
+!src/log/access.log
 npm-debug.log
 .nyc_output/
+dist/

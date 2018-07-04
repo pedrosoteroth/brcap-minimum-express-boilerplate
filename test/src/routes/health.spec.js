@@ -3,7 +3,7 @@ import {
 } from 'chai';
 
 const request = require('supertest');
-const app = require('../../../config/express');
+const app = require('../../../src');
 
 describe('GET /health', () => {
   it('should say it is running fine', (done) => {

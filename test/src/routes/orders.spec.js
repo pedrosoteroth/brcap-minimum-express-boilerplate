@@ -1,7 +1,7 @@
 const request = require('supertest');
 const { expect } = require('chai');
 
-const app = require('../../../config/express');
+const app = require('../../../src');
 
 describe('GET /orders', () => {
   it('validates order params', (done) => {

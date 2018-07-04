@@ -8,12 +8,10 @@ To begin with, the important parts of the structure for now are:
 
 ```
 package.json
-app.js
-config/
-|express.js
-|log4js.json
 node_modules/
-app/
+src/
+|-config
+|-index.js
 |-controllers/
 |-log/
 |-middlewares/
@@ -25,16 +23,16 @@ app/
 ```
 
 * **package.json**: Holds project configuration.
-* **app.js**: The starting point for the API.
-* **config**: Application level configuration files.
 * **node_modules/**: All modules described in `package.json` will be automatically placed here using `npm`commands such as `npm install cors --save`.
-* **app/**: Our source code base folder.
-* **app/controllers/**: Controllers modules/files.
-* **app/log/**: Holds the applicatino logs.
-* **app/middlewares/**: Holds modules/files that deals with different code environments.
-* **app/models/**: Modules/files abstraction of our database schema.
-* **app/routes/**: Modules/files that know which controllers should handle the incoming requests.
-* **app/services/**: Modules/files that handle business related rules.
-* **app/utils/**: Help us with mixins methods.
-* **app/validations/**: Knows how the incoming request should behave.
+* **src/**: Our source code base folder.
+* **src/index.js**: The starting point for the API.
+* **src/config**: Application level configuration files.
+* **src/controllers/**: Controllers modules/files.
+* **src/log/**: Holds the application logs.
+* **src/middlewares/**: Holds modules/files that deals with different code environments.
+* **src/models/**: Modules/files abstraction of our database schema.
+* **src/routes/**: Modules/files that know which controllers should handle the incoming requests.
+* **src/services/**: Modules/files that handle business related rules.
+* **src/utils/**: Help us with mixins methods.
+* **src/validations/**: Knows how the incoming request should behave.
 
