@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "babel-node app.js",
-    "test": "nyc mocha test/**/*.spec.js --verbose || true"
+    "test": "nyc mocha test/**/*.spec.js --verbose --compilers js:babel-register || true"
   },
   "author": "Pedro Sotero",
   "license": "ISC",
@@ -29,6 +29,7 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
     "chai": "^4.1.2",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^13.0.0",
