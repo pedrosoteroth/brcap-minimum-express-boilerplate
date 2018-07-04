@@ -32,7 +32,6 @@ consign({
     .into(app);
 
 /** server listening message at @module app */
-console.log('process ', process.argv[1]);
 app.listen(port, (err) => {
     if (err) {
         logger.error(`Failed to listen on port ${port}.`);
