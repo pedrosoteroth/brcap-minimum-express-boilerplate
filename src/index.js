@@ -26,7 +26,7 @@ app.use(bodyParser.json());
 
 /** use consign for autoload scripts into @module app */
 consign({
-        cwd: process.argv[1],
+        cwd: __dirname,
     })
     .include('routes')
     .into(app);
