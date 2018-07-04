@@ -1,16 +1,18 @@
-const request = require('supertest');
-const expect = require('chai').expect;
+import {
+  expect,
+} from 'chai';
 
+const request = require('supertest');
 const app = require('../../../config/express');
 
-describe('GET /health', function() {
-  it('should say it is running fine', function(done) {
+describe('GET /health', () => {
+  it('should say it is running fine', (done) => {
     request(app)
       .get('/health')
-      .end(function (err, res) {
+      .end((err, res) => {
         expect(res.statusCode).to.equal(200);
         expect(res.text).to.include('running fine');
-        done(); 
+        done();
       });
   });
 });
